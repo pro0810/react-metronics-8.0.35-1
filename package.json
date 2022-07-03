@@ -2,7 +2,7 @@
   "name": "demo1",
   "version": "8.0.34",
   "private": true,
-  "homepage": "/metronic8/react/demo1",
+  "homepage": "",
   "dependencies": {
     "@formatjs/intl-pluralrules": "^4.0.28",
     "@formatjs/intl-relativetimeformat": "^9.1.7",
@@ -60,7 +60,7 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -102,5 +102,8 @@
   },
   "eslintIgnore": [
     "dist/*"
-  ]
+  ],
+  "resolutions": {
+    "@types/react": "^17.0.0"
+  }
 }
