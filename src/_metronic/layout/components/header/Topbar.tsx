@@ -22,7 +22,10 @@ const Topbar: FC = () => {
       <div className={clsx('d-flex align-items-center', toolbarButtonMarginClass)}>
         {/* begin::Drawer toggle */}
         <div
-          className={clsx('btn btn-icon btn-active-light-primary btn-custom', toolbarButtonHeightClass)}
+          className={clsx(
+            'btn btn-icon btn-active-light-primary btn-custom',
+            toolbarButtonHeightClass
+          )}
           id='kt_activities_toggle'
         >
           <KTSVG
@@ -36,7 +39,10 @@ const Topbar: FC = () => {
       <div className={clsx('d-flex align-items-center', toolbarButtonMarginClass)}>
         {/* begin::Menu wrapper */}
         <div
-          className={clsx('btn btn-icon btn-active-light-primary btn-custom', toolbarButtonHeightClass)}
+          className={clsx(
+            'btn btn-icon btn-active-light-primary btn-custom',
+            toolbarButtonHeightClass
+          )}
           data-kt-menu-trigger='click'
           data-kt-menu-attach='parent'
           data-kt-menu-placement='bottom-end'
@@ -56,7 +62,7 @@ const Topbar: FC = () => {
         {/* begin::Menu wrapper */}
         <div
           className={clsx(
-            'btn btn-icon btn-active-light-primary btn-custom',
+            'btn btn-icon btn-active-light-primary btn-custom position-relative',
             toolbarButtonHeightClass
           )}
           id='kt_drawer_chat_toggle'

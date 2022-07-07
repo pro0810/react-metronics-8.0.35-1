@@ -22,7 +22,7 @@ import {MetronicI18nProvider} from './_metronic/i18n/Metronici18n'
  *
  * import './_metronic/assets/css/style.rtl.css'
  **/
-import './_metronic/assets/sass/style.scss'
+import './_metronic/assets/sass/style.dark.scss'
 import './_metronic/assets/sass/style.react.scss'
 /**
  * Base URL of the website.

@@ -1,8 +1,9 @@
 import React from 'react'
 import {MenuItem} from './MenuItem'
 import {MenuInnerWithSub} from './MenuInnerWithSub'
-import {MegaMenu} from './MegaMenu'
+// import {MegaMenu} from './MegaMenu'
 import {useIntl} from 'react-intl'
+import {DefaultPapers} from '../../../../app/pages/papers/DefaultPapers'
 
 export function MenuInner() {
   const intl = useIntl()
@@ -10,6 +11,7 @@ export function MenuInner() {
     <>
       <MenuItem title={intl.formatMessage({id: 'MENU.DASHBOARD'})} to='/dashboard' />
       <MenuItem title='Layout Builder' to='/builder' />
+      <MenuItem title='Home' to='/home' />
       <MenuInnerWithSub
         title='Crafted'
         to='/crafted'
@@ -116,13 +118,14 @@ export function MenuInner() {
         </MenuInnerWithSub>
       </MenuInnerWithSub>
       <MenuInnerWithSub
-        isMega={true}
-        title='Mega menu'
-        to='/mega-menu'
+        title='Paper'
+        to='/paper'
         menuPlacement='bottom-start'
-        menuTrigger='click'
+        menuTrigger={`{default:'click', lg: 'hover'}`}
       >
-        <MegaMenu />
+        {Array.from(Object.keys(DefaultPapers)).map((item, index) => (
+          <MenuItem to={`/paper/${item}`} title={item} hasBullet={true} key={item} />
+        ))}
       </MenuInnerWithSub>
     </>
   )

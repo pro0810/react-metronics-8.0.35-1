@@ -40,6 +40,7 @@ export interface IContent {
 
 export interface IFooter {
   width: 'fixed' | 'fluid'
+  display: boolean
 }
 
 export interface ISidebar {
